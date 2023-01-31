@@ -1,0 +1,46 @@
+<div class="container bg-light rounded-3 shadow-lg  ">
+    
+  <form class="p-4 p-md-5 border bg-dark" autocomplete="off"  (ngSubmit)="submitForm()">
+  <h3 class="text-center mb-5 text-white">Login Here</h3>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com" required>
+          <label for="floatingInput">Email address</label>
+        </div>
+
+        <!-- Validation start-->
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors?.['required']">
+            Name is required.
+          </div>
+          <div *ngIf="email.errors?.['minlength']">
+            Name must be at least 3 characters long.
+          </div>
+        </div>
+        <!-- Validation end -->
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" formControlName="pw" id="floatingPassword" placeholder="Password" required>
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <!-- Validation start-->
+        <div *ngIf="pw.invalid && (pw.dirty || pw.touched)" class="alert alert-danger">
+          <div *ngIf="pw.errors?.['required']">
+            Name is required.
+          </div>
+          <div *ngIf="pw.errors?.['minlength']">
+            Name must be at least 3 characters long.
+          </div>
+        </div>
+        <!-- Validation end -->
+
+        <div class="checkbox mb-3 text-light">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+        <hr class="my-4">
+        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+      </form>
+  </div>

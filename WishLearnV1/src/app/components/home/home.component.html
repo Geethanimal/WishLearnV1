@@ -1,0 +1,43 @@
+<!-- Static Nav bar Start-->
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="/help" class="nav-link px-2 text-white">Help</a></li>
+        <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+      </ul>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2" (click)="clickLogin()">Login</button>
+        <button type="button" class="btn btn-warning" (click)="clickSignUp()">Sign-up</button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Static Nav Bar End -->
+<!-- Static Content Start -->
+<div class="container my-5">
+  <div class="row rounded-3 border shadow-lg">
+    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+      <h1 class="display-5 fw-bold lh-1 text-center">Welcome to WishLearn!</h1>
+      <p class="lead mt-5 text-center">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+        world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
+        extensive prebuilt components, and powerful JavaScript plugins.</p>
+
+    </div>
+    <div class="col-lg-4  p-0 overflow-hidden ">
+      <!-- Login and Register form component -->
+        <app-login id="TAG_Login"></app-login>
+        <app-register id="TAG_Register"></app-register>
+      
+    </div>
+  </div>
+</div>
+<!-- Static Content End -->
