@@ -21,6 +21,8 @@ import { PosterComponent } from './components/poster/poster.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ProfileComponent } from './components/profile/profile.component';
+import { PostProfileComponent } from './components/post-profile/post-profile.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     ProfileStudentComponent,
     WallComponent,
     PostComponent,
-    PosterComponent
+    PosterComponent,
+    ProfileComponent,
+    PostProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,100 @@
+<main>
+    <section>
+        <div class="container ">
+            <div class="row justify-content-center align-items-center g-2">
+                
+                <div class="col-12">
+                    <div class="container-fluid d-flex bg-dark shadow-lg text-white pt-3 pb-3 shadow-lg">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="42" height="42"
+                            class="rounded-circle me-3">
+                        <button class="btn btn-secondary rounded-pill w-100 text-light" data-bs-toggle="modal"
+                            data-bs-target="#myModal">What's on your mind?</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center align-items-center g-2">
+                
+                <div class="col-12 mt-5">
+<!-- Poster Start -->
+                    <div class="container-fluid mt-3" *ngFor="let poster of posters$ | async">
+                        <div class="container-fluid d-flex bg-dark shadow-lg text-white pt-3 pb-3 shadow-lg">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="42" height="42"
+                                class="rounded-circle me-3">
+                            <h5>{{poster.authername}}</h5>
+                        </div>
+                        <div class="container bg-dark text-white">
+                            <h2 class="text-center">{{poster.title}}</h2>
+                            <p class="text-center">{{poster.question}}</p>
+                            <div id="row_cmnt" class="row row_coment">
+                                <!-- <div *ngFor="let comment of comments$ | async" class="col-12 w-75 rounded p-2 m-3 bg-secondary">
+                                    <h6>{{comment.authername}}</h6>
+                                    <p>{{comment.cmnt}}</p>
+                                </div> -->
+                                <div  class="col-12 w-75 rounded p-2 m-3 bg-secondary">
+                                    <h6>Firstname Lastname</h6>
+                                    <p>comment</p>
+                                </div>
+                            </div>
+                            <a id="txt_vac" class="text-center" (click)="vacomment()">View All Comment</a>
+                            <form>
+                                <div class="row p-2">
+                        
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" placeholder="Enter email"
+                                            placeholder="comment">
+                                    </div>
+                                    <div class="col-2">
+                                        <button type="submit"  class="btn btn-primary">Send</button>
+                                    </div>
+                        
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- PosterEnd -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div class="container-fluid">
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Ask a Question</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form autocomplete="off" [formGroup]="postForm" (ngSubmit)="submitForm()">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-floating mt-3 mb-3">
+                            <input type="text" class="form-control" formControlName="title" id="title" placeholder="Enter Title" name="title">
+                            <label for="pwd">Title</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="comment" name="question" formControlName="question" placeholder="Question goes here"></textarea>
+                            <label for="comment">Your Question</label>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit"  class="btn btn-primary justify-content-center">Post</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

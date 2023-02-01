@@ -44,4 +44,9 @@ export class UserService {
 
   return this.httpClient.post(`${this.url}/users/login`, user);
 }
+
+Register(user: User): Observable<any> {
+
+  return this.httpClient.post(`${this.url}/users/register`, user);
+}
 }

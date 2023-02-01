@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="container-fluid bg-dark text-white mb-3">
+      <div class="row ">
+        <img alt="abc" class="rounded mx-auto d-block p-0" src="https://i.pinimg.com/736x/39/86/fe/3986fed5bc314b3ea37701b328c2485d--covers-for-facebook-pop-of-color.jpg" width="820px" height="360px"/>
+      </div>
+      <div class="row p-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <h2>FirstName Last Name</h2>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                  <span class="fs-4">Profile</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                  <li class="nav-item">
+                    <a routerLink="profile/profile-wall" class="nav-link active" aria-current="page">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="profile/profile-wall"></use></svg>
+                      Wall
+                    </a>
+                  </li>
+                  <li>
+                    <a routerLink="/about-profile" class="nav-link text-white">
+                      <svg class="bi me-2" width="16" height="16"><a href="/about-profile"></a></svg>
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/settings-profile" class="nav-link text-white">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="/settings-profile"></use></svg>
+                      Settings
+                    </a>
+                  </li>
+                </ul>
+                <hr>
+              </div>
+          </div>
+          <div class="col-6">
+            <app-post-profile></app-post-profile>
+          </div>
+          <div class="col-3">
+            <h5 class="text-center">Your Classes</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

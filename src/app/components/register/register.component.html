@@ -1,57 +1,57 @@
 <div class="container">
-    <form class="p-4 p-md-5 border rounded-3 bg-dark   ">
+    <form class="p-4 p-md-5 border rounded-3 bg-dark" [formGroup]="regForm" (ngSubmit)="submitForm()">
         <h3 class="text-center mb-5 text-white">Register Here</h3>
         <div class="row justify-content-center align-items-center g-2">
             <div class="col">
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="firstName" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="firstName" formControlName="firstName" placeholder="name@example.com">
                     <label for="floatingInput">First Name</label>
                 </div>
             </div>
             <div class="col">
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="LastName" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="LastName" formControlName="LastName" placeholder="name@example.com">
                     <label for="floatingInput">Last Name</label>
                 </div>
             </div>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control " id="Email" placeholder="name@example.com">
+            <input type="email" class="form-control " id="Email" formControlName="Email" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="PhoneNumber" placeholder="name@example.com">
+            <input type="text" class="form-control" id="PhoneNumber" formControlName="PhoneNumber" placeholder="name@example.com">
             <label for="floatingInput">Phone Number</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="DOB" placeholder="name@example.com">
+            <input type="text" class="form-control" id="DOB" formControlName="DOB" placeholder="name@example.com">
             <label for="floatingInput">Date of birth</label>
         </div>
         <div class="row justify-content-center align-items-center g-2">
             <div class="col-6">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" formControlName="Gender" aria-label="Default select example">
                     <option selected>Gender</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
             </div>
             <div class="col-6">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" formControlName="Role" aria-label="Default select example">
                     <option selected>Role</option>
-                    <option value="1">Student</option>
-                    <option value="2">Teacher</option>
+                    <option value="Student">Student</option>
+                    <option value="Teacher">Teacher</option>
                 </select>
             </div>
             <div class="col-6">
                 <div class="form-floating mb-3 ">
-                    <input type="password" class="form-control" id="Password" placeholder="Password" />
+                    <input type="password" class="form-control" formControlName="Password" id="Password" placeholder="Password" />
                     <label for="floatingPassword">Password</label>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-floating mb-3 ">
-                    <input type="password" class="form-control" id="ConfirmPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="ConfirmPassword" formControlName="ConfirmPassword" placeholder="Password">
                     <label for="floatingPassword">Confirm Password</label>
                 </div>
             </div>

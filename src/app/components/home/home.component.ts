@@ -53,4 +53,18 @@ export class HomeComponent {
       });
   }
 
+  reg(user: User) {
+    this.userService.createUser(user)
+      .subscribe({
+        next: (value: any) => {
+          console.log(value);
+          this.router.navigate(['/home-dynamic']);
+          },
+        error: (error: any) => {
+          alert("Failed to Register");
+          console.error(error);
+        }
+      });
+  }
+
 }
