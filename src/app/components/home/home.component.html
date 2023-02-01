@@ -34,7 +34,7 @@
     </div>
     <div class="col-lg-4  p-0 overflow-hidden ">
       <!-- Login and Register form component -->
-        <app-login id="TAG_Login"></app-login>
+        <app-login id="TAG_Login" (formSubmitted)="login($event)"></app-login>
         <app-register id="TAG_Register"></app-register>
       
     </div>

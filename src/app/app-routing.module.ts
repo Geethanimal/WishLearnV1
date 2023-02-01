@@ -5,6 +5,7 @@ import { LiveChatComponent } from './components/live-chat/live-chat.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { VideoStreamComponent } from './components/video-stream/video-stream.component';
+import { HomeDynamicComponent } from './components/home-dynamic/home-dynamic.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'live-chat', component: LiveChatComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'video-stream', component: VideoStreamComponent }
+  { path: 'video-stream', component: VideoStreamComponent },
+  { path: 'home-dynamic', component: HomeDynamicComponent }
   
 ];
 

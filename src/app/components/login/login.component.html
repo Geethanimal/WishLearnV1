@@ -1,6 +1,6 @@
 <div class="container bg-light rounded-3 shadow-lg  ">
     
-  <form class="p-4 p-md-5 border bg-dark" autocomplete="off"  (ngSubmit)="submitForm()">
+  <form class="p-4 p-md-5 border bg-dark" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="submitForm()">
   <h3 class="text-center mb-5 text-white">Login Here</h3>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com" required>

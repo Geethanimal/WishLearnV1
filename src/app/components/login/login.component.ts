@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit{
 
   constructor(private fb: FormBuilder) { }
   
-    get email() { return this.loginForm.get('email')!; }
+  get email() { return this.loginForm.get('email')!; }
   get pw() { return this.loginForm.get('pw')!; }
 
   ngOnInit() {
